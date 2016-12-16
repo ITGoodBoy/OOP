@@ -12,7 +12,7 @@ public class Queen extends ChessFigure {
         if (isWhite())
         {
             System.out.println("I'm white Queen");
-            System.out.println("my position x = " + y + " my position y = " + (7 - x));
+
         }
 
         else
