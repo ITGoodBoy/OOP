@@ -14,7 +14,7 @@ public abstract class ChessFigure  {
         this.positionX = positionX;
         this.positionY = positionY;
         Image img = new ImageIcon(getClass().getResource("resources/" + image)).getImage().getScaledInstance(35, 50, Image.SCALE_DEFAULT);
-        this.image = new ImageIcon(img);;
+        this.image = new ImageIcon(img);
     }
 
     public abstract void move(int positionX, int positionY);
@@ -32,6 +32,11 @@ public abstract class ChessFigure  {
     }
 
     public void setPositionX(int positionX) {
+        if (positionX < 0 || positionX > 7)
+        {
+            System.out.println("position must be between 0 and 7 inclusive");
+            throw new ArrayIndexOutOfBoundsException();
+        }
         this.positionX = positionX;
     }
 
@@ -40,6 +45,11 @@ public abstract class ChessFigure  {
     }
 
     public void setPositionY(int positionY) {
+        if (positionY < 0 || positionY > 7)
+        {
+            System.out.println("position must be between 0 and 7 inclusive");
+            throw new ArrayIndexOutOfBoundsException();
+        }
         this.positionY = positionY;
     }
 
