@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public abstract class ChessFigure  {
-// encapsulation
+//encapsulation
 
     private boolean white;
     private int positionX;
